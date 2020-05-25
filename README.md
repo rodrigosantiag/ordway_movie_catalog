@@ -1,24 +1,23 @@
-# README
+# README Ordway Movie Catalog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README documents all steps necessary to get the application up and running locally.
 
-Things you may want to cover:
+This application is a simple CRUD which user can add, edit and remove movies from a catalog.
 
-* Ruby version
+Each movie can be added to system with its title, summary, year and genre. Also an IMDB link can be added to movie record.
 
-* System dependencies
+**Steps:**
 
-* Configuration
+* Ruby 2.6.1
 
-* Database creation
+* Rails 6.0.3.1
 
-* Database initialization
+* Database MySQL 5.7.30. In config/database.yml set your database credentials
 
-* How to run the test suite
+* Database creation: `rake db:create`
 
-* Services (job queues, cache servers, search engines, etc.)
+* Database initialization: `rake db:migrate`
 
-* Deployment instructions
+* Start rails server  `rails s`
 
-* ...
+* On your browser access http://localhost:3000

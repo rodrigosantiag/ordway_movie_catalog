@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.all.order(:title)
+    @movies = Movie.all.order(:title).page params[:page]
 
     respond_to do |format|
       format.html
