@@ -1,0 +1,10 @@
+<%= form_with model: @movie, class: 'col-12', local: true do |f| %>
+
+  <%= render 'errors', :object => @movie %>
+
+  <%= render 'form_fields', :f => f %>
+
+
+  <%= f.submit 'Save', class: 'btn btn-primary' %>
+  <%= link_to 'Cancel', movies_path, class: 'btn btn-secondary' %>
+<% end %>
