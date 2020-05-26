@@ -23,10 +23,10 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       if saved
-        flash[:success] = "Movie \"#{@movie.title}\" created!"
-        format.html { redirect_to movies_path }
+        format.html { redirect_to movies_path, notice: "Movie \"#{@movie.title}\" created!" }
       else
         format.html { render action: 'new' }
+        format.js
       end
     end
   end
@@ -46,10 +46,10 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       if saved
-        flash[:success] = "Movie \"#{@movie.title}\" updated!"
-        format.html { redirect_to movies_path }
+        format.html { redirect_to movies_path, notice: "Movie \"#{@movie.title}\" updated!" }
       else
         format.html { render action: 'edit' }
+        format.js
       end
     end
   end
@@ -59,8 +59,7 @@ class MoviesController < ApplicationController
 
     @movie.destroy
 
-    flash[:success] = "Movie \"#{@movie.title}\" removed!"
-    redirect_to movies_path
+    redirect_to movies_path, notice: "Movie \"#{@movie.title}\" removed!"
   end
 
   private

@@ -1,10 +1,12 @@
-<%= form_with model: @movie, class: 'col-12', local: true do |f| %>
+<div id="form_movie" class="col-12">
+  <%= form_with model: @movie, class: 'col-12' do |f| %>
 
-  <%= render 'errors', :object => @movie %>
+    <div id="errors"></div>
 
-  <%= render 'form_fields', :f => f %>
+    <%= render 'form_fields', :f => f %>
 
 
-  <%= f.submit 'Save', class: 'btn btn-primary' %>
-  <%= link_to 'Cancel', movies_path, class: 'btn btn-secondary' %>
-<% end %>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', movies_path, class: 'btn btn-secondary' %>
+  <% end %>
+</div>
