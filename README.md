@@ -18,6 +18,8 @@ Each movie can be added to system with its title, summary, year and genre. Also 
 
 * Database initialization: `rake db:migrate`
 
+* Run `yarn` or `npm install` depending on which one you use
+
 * Start rails server  `rails s`
 
 * On your browser access http://localhost:3000
