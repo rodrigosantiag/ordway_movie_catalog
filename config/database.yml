@@ -49,7 +49,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
   database: movie_catalog_production
   username: movie_catalog
   password: <%= ENV['MOVIE_CATALOG_DATABASE_PASSWORD'] %>
