@@ -48,6 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  url: <%= ENV['DATABASE_URL'] %>
   <<: *default
   database: movie_catalog_production
   username: movie_catalog
