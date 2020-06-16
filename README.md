@@ -23,3 +23,5 @@ Each movie can be added to system with its title, summary, year and genre. Also 
 * Start rails server  `rails s`
 
 * On your browser access http://localhost:3000
+
+* Heroku link: https://ordway-movie-catalog.herokuapp.com/
